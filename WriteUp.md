@@ -13,6 +13,8 @@ This project was done as following steps::
 1. Average/extrapolate line segments and draw them onto the image(frame).
 1. Apply to video.
 
+![helper_functions_used](https://github.com/LUUTHIENXUAN/Udacity-CarND-LaneLines-P1/blob/master/helper_functions_used.png)
+
 
 [//]: # (Image References)
 
@@ -77,5 +79,5 @@ Function                    |Explaination
 
 >  - **Noise** 's solution  would be taking average less few frames or reduce the height of region of interest. Furthermore, I did simple sanity check, which filter out any values exceeded over 20% of averaged values in 20 frames. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQxMzUwNjcwXX0=
+eyJoaXN0b3J5IjpbLTEwMDQxNjgyMjZdfQ==
 -->
