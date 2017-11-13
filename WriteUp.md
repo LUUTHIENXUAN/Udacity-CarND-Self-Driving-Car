@@ -76,3 +76,6 @@ Function                    |Explaination
 >  -  OpenCV has **`cv2.polyfit`** function could draw curved lines. Hough transform's  output (`y value`)may be used as input of  **`cv2.polyfit`**.
 
 >  - **Noise** 's solution  would be taking average less few frames or reduce the height of region of interest. Furthermore, I do simple sanity check, which filter out any values exceeded over 20% of averaged values in 20 frames. 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjc2NDMyOTJdfQ==
+-->
