@@ -13,9 +13,15 @@ This project was done as following steps::
 1. Average/extrapolate line segments and draw them onto the image(frame).
 1. Apply to video.
 
+### Image Result
 ![helper_functions_used](https://github.com/LUUTHIENXUAN/Udacity-CarND-LaneLines-P1/blob/master/helper_functions_used.png)
 
 ![draw_line_improved](https://github.com/LUUTHIENXUAN/Udacity-CarND-LaneLines-P1/blob/master/draw_line_improved.png)
+
+### Video Result
+1. [Video: solidYellowLeft](https://youtu.be/VCLtHHBUPZA)
+1. [Video: solidWhiteRight Video](https://youtu.be/tFdcKgX3r5c)
+1. [Videochallenge Video](https://youtu.be/RUNxUG4AucU)
 
 ## Reflection
 
@@ -53,10 +59,7 @@ Function                    |Explaination
 **`extrapolate`**          |take average value at each group then extrapolate to top and bottom the region of interest. 
 **`average_list`**         |take average value over frames (default 20 frames) to make the pipeline more stable. Also, do simple sanity check to filter out any values at current frame exceeded over 20% of averaged values over 20 frames.
                 
-### Video Result
-1. [Video: solidYellowLeft](https://youtu.be/VCLtHHBUPZA)
-1. [Video: solidWhiteRight Video](https://youtu.be/tFdcKgX3r5c)
-1. [Videochallenge Video](https://youtu.be/RUNxUG4AucU)
+
 
 ## Discussion
 **SHORTCOMINGS**
@@ -75,5 +78,5 @@ Function                    |Explaination
 
 >  - **Noise** 's solution  would be taking average less few frames or reduce the height of region of interest. Furthermore, I did simple sanity check, which filter out any values exceeded over 20% of averaged values in 20 frames. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTkxMjU5MjhdfQ==
+eyJoaXN0b3J5IjpbMTczMjExNzgyOV19
 -->
