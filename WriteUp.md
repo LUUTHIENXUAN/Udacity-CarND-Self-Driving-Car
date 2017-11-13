@@ -53,7 +53,7 @@ Function                    |Explaination
 **`extrapolate`**          |take average value at each group then extrapolate to top and bottom the region of interest. 
 **`average_list`**         |take average value over frames (default 20 frames) to make the pipeline more stable. Also, do simple sanity check to filter out any values at current frame exceeded over 20% of averaged values over 20 frames.
                 
-### Video
+### Video Result
 1. [Video: solidYellowLeft](https://youtu.be/VCLtHHBUPZA)
 1. [Video: solidWhiteRight Video](https://youtu.be/tFdcKgX3r5c)
 1. [Videochallenge Video](https://youtu.be/RUNxUG4AucU)
@@ -75,5 +75,5 @@ Function                    |Explaination
 
 >  - **Noise** 's solution  would be taking average less few frames or reduce the height of region of interest. Furthermore, I did simple sanity check, which filter out any values exceeded over 20% of averaged values in 20 frames. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc4MjQ1MTM1XX0=
+eyJoaXN0b3J5IjpbLTE4NTkxMjU5MjhdfQ==
 -->
