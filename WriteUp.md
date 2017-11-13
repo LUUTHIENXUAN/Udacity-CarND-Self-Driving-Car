@@ -15,11 +15,7 @@ This project was done as following steps::
 
 ![helper_functions_used](https://github.com/LUUTHIENXUAN/Udacity-CarND-LaneLines-P1/blob/master/helper_functions_used.png)
 
-
-[//]: # (Image References)
-
-[image1]: ./helper_functions_used.png "helper_functions_used"
-[image2]: ./draw_line_improved.png "draw_line improved"
+![draw_line_improved](https://github.com/LUUTHIENXUAN/Udacity-CarND-LaneLines-P1/blob/master/draw_line_improved.png)
 
 ## Reflection
 
@@ -79,5 +75,5 @@ Function                    |Explaination
 
 >  - **Noise** 's solution  would be taking average less few frames or reduce the height of region of interest. Furthermore, I did simple sanity check, which filter out any values exceeded over 20% of averaged values in 20 frames. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDQxNjgyMjZdfQ==
+eyJoaXN0b3J5IjpbMzc4MjQ1MTM1XX0=
 -->
