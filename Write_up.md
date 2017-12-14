@@ -47,13 +47,7 @@ And some random images
   >     1. position ([-2,2] pixels), AND
   >     2. scale ([.9,1.1] ratio), AND
   >     3. rotation([-15,+15] degrees)These versions are randomly
-     
- 	|  Training Set | Training Set after Argument |
-	|:-------------:|:---------------------------:|
-	| 34799 samples |               51690 samples |
-	
-	Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
-![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after.png)
+ 
  2. Pre-process the Data Set
 As a first step, I decided to convert the images to `YUV` and use channel `Y` as the grayscale
 because it showed image clearly than converting image to gray at some tricky conditions.
@@ -62,6 +56,12 @@ Then I use `cv2.equalizeHist` `cv2.createCLAHE` to emphasize edges.
  3. Normalize the Data Set `def normaize(data)`
   I normalized the image data so that the data has mean zero and equal variance
 
+|  Training Set | Training Set after Argument |
+|:-------------:|:---------------------------:|
+| 34799 samples |               51690 samples |
+
+Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
+![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after.png)
 Here is an example of an original image and an preprocessed image:
 ![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/transform_iamge.png)
 
