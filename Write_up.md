@@ -32,6 +32,7 @@ Here is the statistics of the traffic signs data set:
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed at a glance
 ![Dataset](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_before.png)
 
+And some random images
 ![Random Image](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/random_image.png)
 ### Design and Test a Model Architecture
 
@@ -47,9 +48,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
   >     2. scale ([.9,1.1] ratio), AND
   >     3. rotation([-15,+15] degrees)These versions are randomly
      
- 	| Training Set         	|     Training Set after Argument		|
-	|:--------------------- |-------------------------------------      |
-	| 34799 samples         |  51690 samples                         |  
+ 	|  Training Set | Training Set after Argument |
+	|:-------------:|:---------------------------:|
+	| 34799 samples |               51690 samples |
 	
 	Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
 ![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after.png)
