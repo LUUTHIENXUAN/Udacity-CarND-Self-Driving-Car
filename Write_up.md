@@ -1,4 +1,4 @@
-# **Project 2: Build a Traffic Sign Recognition Classifier** 
+﻿# **Project 2: Build a Traffic Sign Recognition Classifier** 
 
 ---
 
@@ -47,6 +47,12 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
   >     2. scale ([.9,1.1] ratio), AND
   >     3. rotation([-15,+15] degrees)These versions are randomly
      
+ 	| Training Set         	|     Training Set after Argument		|
+	|:--------------------- |-------------------------------------      |
+	| 34799 samples         |  51690 samples                         |  
+	
+	Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
+![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after.png)
  2. Pre-process the Data Set
 As a first step, I decided to convert the images to `YUV` and use channel `Y` as the grayscale
 because it showed image clearly than converting image to gray at some tricky conditions.
@@ -54,12 +60,6 @@ Then I use `cv2.equalizeHist` `cv2.createCLAHE` to emphasize edges.
 
  3. Normalize the Data Set `def normaize(data)`
   I normalized the image data so that the data has mean zero and equal variance
-
- Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
-![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after.png)
-|Training Set before Argument	| Training Set after Argument			| 
-| -------------                	|-------------          				| 
-| 34799 samples			    	| 51690 samples 		    			| 
 
 Here is an example of an original image and an preprocessed image:
 ![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/transform_iamge.png)
@@ -102,19 +102,22 @@ To train the model, I used an parameters as below:
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-| Data set       		   			| Accuracy	        						| 
-|-------------------: 				|------------------------------------------:|
-| training set accuracy   			|  0.939        							|
-| validation set accuracy			|  0.968        							|
-| test set accuracy	        		|  0.939        							| 
+| Data set          	|     Accuracy        					|
+|:--------------------- |-------------------------------------: |
+| training set          |  0.939                               	|  
+| validation set        |  0.968                               	| 
+| test set              |  0.939	                            |
 
-1. Pre-process in step 2 alone, `Validation Accuracy` can reach up to 0.93.
-2. Data augmentation was implemented to reduce overfitting on models. `Validation Accuracy` can reach at 0.94
-3. `BATCH_SIZE`'s increment from 128 to 256, 512 results in reduction of Validation Accuracy. Keep BATCH_SIZE= 128 as default.
-4. Reduce learning `rate`, for example from 0.001 to 0.0001 makes `Validation Accuracy` worsen, while trying to run more EPOCH is not going to help. Feels like 20~40 EPOCH is good enough.
-   `rate` = 0.0009, and `EPOCH` = 30, `Validation Accuracy` = 0.946.
-5. Try different regulation as dropout. Apply dropout at fully connected layer can help improve the accuracy of neural network. Validation Accuracy could reach up to 0.968~0.971 . 
-**Note**: Add  dropout after  max_pool decrease Validation Accuracy.
+**Note**
+> 1. Pre-process in step 2 alone, `Validation Accuracy` can reach up to 0.93.
+> 2. Data augmentation was implemented to reduce overfitting on models. `Validation Accuracy` can reach at 0.94
+> 3. `BATCH_SIZE`'s increment from 128 to 256, 512 results in reduction of Validation Accuracy. Keep BATCH_SIZE= 128 as default.
+> 4. Reduce learning `rate`, for example from 0.001 to 0.0001 makes `Validation Accuracy` worsen, while trying to run more EPOCH is not
+> going to help. Feels like 20~40 EPOCH is good enough.    `rate` =
+> 0.0009, and `EPOCH` = 30, `Validation Accuracy` = 0.946.
+> 5. Try different regulation as dropout. Apply dropout at fully connected layer can help improve the accuracy of neural network.
+> Validation Accuracy could reach up to 0.968~0.971 . 
+> **Note**: Add  dropout after  max_pool decrease Validation Accuracy.
 
 
 ### Test a Model on New Images
