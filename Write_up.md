@@ -43,9 +43,9 @@ And some random images
  More diverse training set deformations were also investigated in such as brightness, contrast, shear and blur perturbations to address the numerous real-world deformations.
   > `def transform(image)`
   > Use OpenCv to change brightness, contrast and blur the image  
-  > Use OpenCV's transformation functions `cv2.warpAffine` to randomly generate datas
-  >     1. position ([-2,2] pixels), AND
-  >     2. scale ([.9,1.1] ratio), AND
+  > Use OpenCV's transformation functions `cv2.warpAffine` to randomly generate datas<br>
+  >     1. position ([-2,2] pixels), AND<br>
+  >     2. scale ([.9,1.1] ratio), AND<br>
   >     3. rotation([-15,+15] degrees)These versions are randomly
  
  2. Pre-process the Data Set
@@ -56,6 +56,7 @@ Then I use `cv2.equalizeHist` `cv2.createCLAHE` to emphasize edges.
  3. Normalize the Data Set `def normaize(data)`
   I normalized the image data so that the data has mean zero and equal variance
 
+Data size before and after argument:
 |  Training Set | Training Set after Argument |
 |:-------------:|:---------------------------:|
 | 34799 samples |               51690 samples |
