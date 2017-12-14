@@ -56,14 +56,15 @@ Then I use `cv2.equalizeHist` `cv2.createCLAHE` to emphasize edges.
  3. Normalize the Data Set `def normaize(data)`
   I normalized the image data so that the data has mean zero and equal variance
 
-Data size before and after argument: <br>
+*Data size before and after argument:* 
+
 |  Training Set | Training Set after Argument |
 |:-------------:|:---------------------------:|
-| 34799 samples |               51690 samples |
+| 34799 samples | 51690 samples               |
 
-Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
+*Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance*
 ![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after_new.png)
-Here is an example of an original image and an preprocessed image:
+*Here is an example of an original image and an preprocessed image:*
 ![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/transform_iamge.png)
 
 
@@ -103,7 +104,7 @@ To train the model, I used an parameters as below:<br>
   
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-My final model results were:<br>
+My final model results were:
 |    Data set    | Accuracy |
 |:--------------:|:--------:|
 | training set   |    0.939 |
