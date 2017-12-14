@@ -61,7 +61,7 @@ Then I use `cv2.equalizeHist` `cv2.createCLAHE` to emphasize edges.
 | 34799 samples |               51690 samples |
 
 Here is an exploratory visualization of the data set after argument. It is a bar chart showing how the data distributed at a glance
-![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after.png)
+![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/Distribution_Labels_after_new.png)
 Here is an example of an original image and an preprocessed image:
 ![Dataset after argument](https://github.com/LUUTHIENXUAN/Udacity-CarND-Traffic-Sign-Classifier-P2/blob/master/transform_iamge.png)
 
@@ -91,23 +91,23 @@ My final model consisted of the following layers:
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an parameters as below:
-| Parameter         	|     Value	        					|
-|:--------------------- |-------------------------------------: |
-| EPOCHS                |  40                               	|  
-| BATCH_SIZE            |  128                               	| 
-| rate                  |  0.0009                               |
-| mu                    |  0		                            |
-| sigma                 |  0.1                                  |
+|  Parameter |  Value |
+|:----------:|:------:|
+| EPOCHS     |     40 |
+| BATCH_SIZE |    128 |
+| rate       | 0.0009 |
+| mu         |      0 |
+| sigma      |    0.1 |
 
   
 #### 4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-| Data set          	|     Accuracy        					|
-|:--------------------- |-------------------------------------: |
-| training set          |  0.939                               	|  
-| validation set        |  0.968                               	| 
-| test set              |  0.939	                            |
+|    Data set    | Accuracy |
+|:--------------:|:--------:|
+| training set   |    0.939 |
+| validation set |    0.968 |
+| test set       |    0.939 |
 
 **Note**
 > 1. Pre-process in step 2 alone, `Validation Accuracy` can reach up to 0.93.
