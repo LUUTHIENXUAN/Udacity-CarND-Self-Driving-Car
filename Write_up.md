@@ -19,14 +19,14 @@ The goals / steps of this project are the following:
 #### 1. Provide a basic summary of the data set. 
 
 Here is the statistics of the traffic signs data set:
-|Statistics of the traffic signs data set	| Size			| 
-| ------------- 							|-------------:	| 
-| Number of training examples				| 34799 		| 
-| Number of validation examples 			| 4410			|   
-| Number of testing examples 				| 12630 		| 
-| Image data shape 							| (32, 32, 3) 	| 
-| Number of classes 						| 43			|
 
+| Statistics of the traffic signs data set |     Size    |
+|:----------------------------------------:|:-----------:|
+| Number of training examples              | 34799       |
+| Number of validation examples            | 4410        |
+| Number of testing examples               | 12630       |
+| Image data shape                         | (32, 32, 3) |
+| Number of classes                        | 43          |
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. It is a bar chart showing how the data distributed at a glance
