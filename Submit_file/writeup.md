@@ -14,10 +14,17 @@ The goals / steps of this project are the following:
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
+| File         | Details                                             |
+|--------------|-----------------------------------------------------|
+| `model.py`   | containing the script to create and train the model |
+| `drive.py`   | for driving the car in autonomous mode              |
+| `model.h5`   | containing a trained convolution neural network     |
+| `writeup.md` | summarizing the results                             |
+
 |File            |Details  |
 |--              |--       |
 |`model.py`      |containing the script to create and train the model  |
-|`drive.py`      |for driving the car in autonomous mode  |
+|`drive.py`      |for driving the car in autonomous model  |
 |`model.h5`      |containing a trained convolution neural network  |
 |`writeup.md`    |summarizing the results  |
 
@@ -36,7 +43,7 @@ The model.py file contains the code for training and saving the convolution neur
 #### 1. An appropriate model architecture has been employed
 My model based on Nvidia model with some modifications such as adding `dropout`, `activation('relu')` after `Dense` layer and the data was cropped, resized and finally normalized in the model using a Keras lambda layer. 
 ```sh
-    # crop the images inside Keras and get one sample image
+        # crop the images inside Keras and get one sample image
 	model.add(Cropping2D(cropping=((70, 0), (0, 0)), input_shape=(160, 320, 3)))
 	cropped_img_sample = model.predict(img_sample, batch_size=128)
 	
@@ -56,7 +63,7 @@ My model based on Nvidia model with some modifications such as adding `dropout`,
 
 The model(Nvidia model) contains dropout layers in order to reduce over-fitting. 
 ```sh
-        model.add(Dense(100))
+                model.add(Dense(100))
 		model.add(Dropout(.5))
 		model.add(Activation('relu'))
 		
