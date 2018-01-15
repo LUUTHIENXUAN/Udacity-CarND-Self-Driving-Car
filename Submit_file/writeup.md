@@ -22,13 +22,6 @@ My project includes the following files:
 | `model.h5`   | containing a trained convolution neural network     |
 | `writeup.md` | summarizing the results                             |
 
-|File            |Details  |
-|--              |--       |
-|`model.py`      |containing the script to create and train the model  |
-|`drive.py`      |for driving the car in autonomous model  |
-|`model.h5`      |containing a trained convolution neural network  |
-|`writeup.md`    |summarizing the results  |
-
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
