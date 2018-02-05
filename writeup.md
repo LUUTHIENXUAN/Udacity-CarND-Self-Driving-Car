@@ -42,17 +42,17 @@ The goals / steps of this project are the following:
 	cars    = glob.glob('Dataset/vehicles/vehicles/*/*.png')
 	notcars = glob.glob('Dataset/non-vehicles/non-vehicles/*/*.png')
 	```
-	![alt text][image1]
+	![Car and Not-car Images](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/car_not_car.png)
    I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 Here is an example using the in gray and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
-![alt text][image2]
+![Hog Exmaples](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/Hog_examples.png)
 
 2. #### Explain how you settled on your final choice of HOG parameters.
-	I tried various combinations of parameters such as `color_space` , `orient`,  `spatial_feat`, `hist_feat` and found out that `Lab` or `YUV` of color_space performed well in term of reducing false-positive. 
+	I tried various combinations of parameters such as `color_space` , `orient`,  `spatial_feat`, `hist_feat` and found out that `Lab` or `YUV`, `YCrCb` of color_space performed well in term of reducing false-positive. 
 	Increasing `orient` value dramatically reduces false-positive but badly affect the pipeline performance. `hog_channel` in `ALL` mode is better under various weather conditions. Stop using `hist_feat` contributes in term of performance but still acceptable in accuracy. Here is the final choice of HOG parameters. 
 
 	```python
-	color_space    = 'Lab'  # Can be RGB, HSV, LUV, HLS, *YUV, *YCrCb, *Lab
+	color_space    = 'YCrCb'# Can be RGB, HSV, LUV, HLS, *YUV, *YCrCb, *Lab
 	orient         = 11     # HOG orientations
 	pix_per_cell   = 16     # HOG pixels per cell
 	cell_per_block = 2      # HOG cells per block
@@ -117,34 +117,25 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 	| y_start_stop | [350,550]   | [450,700]   |
 	| xy_overlap   | (0.75,0.75) | (0.55,0.55) |
 	
-	![alt text][image3]
 
 2. #### Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 	Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color, which provided a nice result.  Here are some example images:
-	![alt text][image4]
+	![enter image description here](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/output_bboxes.png)
 
 ---
 
 ### Video Implementation
 
 1. #### Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes are ok as long as you are identifying the vehicles most of the time with minimal false positives.)
-	Here's a [link to my video result](./project_video.mp4)
+	Here's a [link to my video result on Git](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/test_video_output.mp4)
+	Here's a [link to my video result on Youtube](https://youtu.be/PzTuF1J9yI8)
 
 
 2. #### Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 	I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 	Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
-
-### Here are six frames and their corresponding heatmaps:
-
-![alt text][image5]
-
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text][image6]
-
-### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text][image7]
-
+	![enter image description here](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/heat_and_bboxes.png)
+![enter image description here](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/heat_and_bboxes_2.png)
 
 
 ---
@@ -152,73 +143,57 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 ### Discussion
 
 1. #### Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
-	To improve the accuracy for `Linear SVM` I conducted Grid Search To find parameters producing highest score. Test Accuracy was improved from  **0.9885** to **0.9907**. 
+	**Accuracy**
+	To improve the accuracy for `Linear SVM` I conducted Grid Search To find parameters producing highest score. Test Accuracy was improved from  **0.9901** to ** 0.9918**. 
 	I also tried other classifier as described from the top of this markdown. Some of them perform faster by less accuracy then `Linear SVM`. `MLPC` seems to best choice for accuracy. Here is the best 3 when considering trade-off between speed and accuracy.
 	1. SVC
 
-	> 49.44394397735596 Seconds to train this classifier... 		
+	> 6.612290859222412 Seconds to train this classifier...		
 	> Train Accuracy of this classifier =  1.0 		
-	> Test  Accuracy of this classifier =   0.9885
-	> 	0.21602153778076172 Seconds to predict
+	> Test  Accuracy of this classifier =   0.9901
+	> 	0.001003265380859375 Seconds to predict
 
 		
-	> Best Parameters：{'loss': 'squared_hinge', 'C': 0.001}
-	> Train Accuracy of this classifier =  0.9997
-	>  Test  Accuracy of this classifier =  0.9907
+	> Best Parameters：{'C': 0.001, 'loss': 'squared_hinge'}
+	> Train Accuracy of this classifier =  0.9994
+	>  Test  Accuracy of this classifier =  0.9918
 	2. LRC
 	
-	> 30.371036767959595 Seconds to train this classifier... 
+	> 17.391969680786133 Seconds to train this classifier... 
 	> Train Accuracy of this classifier =  1.0 
-	> Test  Accuracy of this classifier =  0.9907
-	> 0.05200505256652832 Seconds to predict
+	> Test  Accuracy of this classifier =  0.9913
+	> 0.0 Seconds to predict
 
 	3. MLPC 
 	
-	> 39.426942348480225 Seconds to train this classifier... 
+	> 22.71587872505188 Seconds to train this classifier... 
 	> Train Accuracy of this classifier =  1.0 
-	> Test  Accuracy of this classifier =  0.9961
-	> 0.05400538444519043 Seconds to predict
+	> Test  Accuracy of this classifier =  0.9958
+	> 0.0010027885437011719 Seconds to predict
 
-	To improve the performance of pipline. OpenCV Hog was adapted instead of Scikit. Here is the function to switch between OpenCV of Scikit:
+	**Performance**
+	To improve the performance of pipline. OpenCV Hog was adapted instead of Scikit. The pipline could run at **near realtime (several frames per second)** 
+	Here is the function to switch between OpenCV of Scikit:
 	```python
 	# To get hog features, use scikit's hog or OpenCV's HOGDescriptor
 	# Define a function to return HOG features and visualization
-	def get_hog_features(img, orient, pix_per_cell, cell_per_block,\
-                         vis=False, feature_vec=True, method = "opencv"):
+	def get_hog_features(img, orient,pix_per_cell,
+	                     cell_per_block,vis=False,
+	                     feature_vec=True,method="opencv"):
     
 	    if method == "scikit":
-	        # Call with two outputs if vis==True
-	        if vis == True:
-	            features, hog_image = hog(img,orientations=orient, 
-                                          pixels_per_cell=(pix_per_cell, 
-                                                           pix_per_cell),
-                                          cells_per_block=(cell_per_block,
-                                                           cell_per_block), 
-                                          transform_sqrt=True, 
-                                          visualise=vis,
-                                          feature_vector=feature_vec)
-	            return features, hog_image
-	        # Otherwise call with one output
-	        else:
-	            features = hog(img, orientations=orient, 
-                               pixels_per_cell=(pix_per_cell,
-                                                pix_per_cell),
-                               cells_per_block=(cell_per_block,
-                                                cell_per_block), 
-                               transform_sqrt=True, 
-                               visualise=vis, feature_vector=feature_vec)
-	            return features
-    
+	        ...
 	    if method == "opencv":
-	        cell_size    = (pix_per_cell, pix_per_cell)
-	        block_size   = (cell_per_block, cell_per_block) 
-	        nbins        = orient
-	        #https://discussions.udacity.com/t/ways-to-improve-processing-time/237941/13
-	        hogCV = cv2.HOGDescriptor(_winSize     =(img.shape[1] // cell_size[1] * cell_size[1],img.shape[0] // cell_size[0] * cell_size[0]),
-                                      _blockSize   =(block_size[1] * cell_size[1],block_size[0] * cell_size[0]),
-                                      _blockStride =(cell_size[1], cell_size[0]),
-                                      _cellSize    =(cell_size[1], cell_size[0]),
-                                      _nbins       = nbins)
-
-	        return np.ravel(hogCV.compute(img))
+	        ...
     ```
+      To further improve the performance I adapted the idea in project 4, the pipline searched blindly at each 5 frames. Once some cars were found in that frame of video, they would be searched around the corners (including the margin) of the previous detection. Below is the setting up margin function. Input is previous detection result and margin is 50. Now the pipline could run at **around 12 frames per second**. 
+      ```python
+      def expand(self, x, exp=50):
+          X0 = min(x[0][0],x[1][0])-exp
+	      X1 = max(x[0][0],x[1][0])+exp
+		  Y0 = min(x[0][1],x[1][1])-exp
+	      Y1 = max(x[0][1],x[1][1])+exp
+	      return ((X0,Y0),(X1,Y1))
+   ```
+   **False Positives**
+   I added heat at current frame then I stored current heat to global heat, and applied threshold to help remove false positives. The false positives could be reduced as small as possible.
