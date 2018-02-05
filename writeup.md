@@ -46,7 +46,8 @@ The goals / steps of this project are the following:
 	
    I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 Here is an example using the in gray and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
-![Hog Exmaples](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/Hog_examples.png)
+
+	![Hog Exmaples](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/Hog_examples.png)
 
 2. #### Explain how you settled on your final choice of HOG parameters.
 	I tried various combinations of parameters such as `color_space` , `orient`,  `spatial_feat`, `hist_feat` and found out that `Lab` or `YUV`, `YCrCb` of color_space performed well in term of reducing false-positive. 
@@ -121,6 +122,7 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 
 2. #### Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 	Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color, which provided a nice result.  Here are some example images:
+	
 	![enter image description here](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/output_bboxes.png)
 
 ---
@@ -145,6 +147,7 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 
 1. #### Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 	**Accuracy**
+	
 	To improve the accuracy for `Linear SVM` I conducted Grid Search To find parameters producing highest score. Test Accuracy was improved from  **0.9901** to ** 0.9918**. 
 	I also tried other classifier as described from the top of this markdown. Some of them perform faster by less accuracy then `Linear SVM`. `MLPC` seems to best choice for accuracy. Here is the best 3 when considering trade-off between speed and accuracy.
 	1. SVC
@@ -173,6 +176,7 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 	> 0.0010027885437011719 Seconds to predict
 
 	**Performance**
+	
 	To improve the performance of pipline. OpenCV Hog was adapted instead of Scikit. The pipline could run at **near realtime (several frames per second)** 
 	Here is the function to switch between OpenCV of Scikit:
 	```python
@@ -197,4 +201,5 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 	      return ((X0,Y0),(X1,Y1))
    ```
    **False Positives**
+   
    I added heat at current frame then I stored current heat to global heat, and applied threshold to help remove false positives. The false positives could be reduced as small as possible.
