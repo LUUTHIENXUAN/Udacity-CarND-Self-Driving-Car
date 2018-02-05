@@ -43,6 +43,7 @@ The goals / steps of this project are the following:
 	notcars = glob.glob('Dataset/non-vehicles/non-vehicles/*/*.png')
 	```
 	![Car and Not-car Images](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/car_not_car.png)
+	
    I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 Here is an example using the in gray and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 ![Hog Exmaples](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/Hog_examples.png)
