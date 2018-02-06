@@ -1,4 +1,4 @@
-﻿## Project 5: Behavioral Cloning
+﻿## Project 5: Vehicle Detection
 
 **Vehicle Detection Project**
 
@@ -21,16 +21,6 @@ The goals / steps of this project are the following:
 5. Run pipeline on a video stream (start with the test_video.mp4 and later implement on full project_video.mp4) and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 6. Estimate a bounding box for vehicles detected.
 
-[//]: # (Image References)
-[image1]: ./examples/car_not_car.png
-[image2]: ./examples/HOG_example.jpg
-[image3]: ./examples/sliding_windows.jpg
-[image4]: ./examples/sliding_window.jpg
-[image5]: ./examples/bboxes_and_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
-[video1]: ./project_video.mp4
-
 ## [Rubric Points](https://review.udacity.com/#!/rubrics/513/view) 
 ### Writeup / README
 
@@ -43,8 +33,10 @@ The goals / steps of this project are the following:
 	notcars = glob.glob('Dataset/non-vehicles/non-vehicles/*/*.png')
 	```
 	![Car and Not-car Images](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/car_not_car.png)
+	
    I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 Here is an example using the in gray and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
+
 ![Hog Exmaples](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/Hog_examples.png)
 
 2. #### Explain how you settled on your final choice of HOG parameters.
@@ -120,6 +112,7 @@ Here is an example using the in gray and HOG parameters of `orientations=9`, `pi
 
 2. #### Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 	Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color, which provided a nice result.  Here are some example images:
+	
 	![enter image description here](https://github.com/LUUTHIENXUAN/Udacity-CarND-Vehicle-Detection-P5/blob/master/markdown_images/output_bboxes.png)
 
 ---
