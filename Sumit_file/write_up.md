@@ -61,7 +61,9 @@ The goals / steps of this project are the following:
 	```
 	Instead, I *found out a simple way using `Sobel` threshold only*, which could extract exactly line pixels in various environment conditions. The idea is that : 
 	> Black-to-White transition is taken as Positive slope (it has a
-	> positive value) while White-to-Black transition is taken as a Negative slope (It has negative value)	![Detect edges](https://docs.opencv.org/3.0-beta/_images/double_edge.jpg)
+	> positive value) while White-to-Black transition is taken as a Negative slope (It has negative value)	
+	
+	![Detect edges](https://docs.opencv.org/3.0-beta/_images/double_edge.jpg)
 	
 	Using negative slope (White-to-Black) only can help reduce noises such as shadows lines on roads.
 	```python
@@ -176,6 +178,7 @@ The goals / steps of this project are the following:
 	    return result #write_offset
     ``` 
 	Here is an example of my result on a test image:
+	
 	![Pipline image](https://github.com/LUUTHIENXUAN/Udacity-CarND-Advanced-Lane-Lines-P4/blob/master/pipline_image_test.png)
 
 ---
