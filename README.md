@@ -41,22 +41,27 @@ Udacity Self-Driving Car Engineer Nanodegree projects.
 
 ## Table of Contents
 
-#### [P1 - Finding Lane Lines on the Road](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P01-LaneLines)
+#### [P01 - Finding Lane Lines on the Road](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P01-LaneLines)
  - **Summary:** Detected highway lane lines on a video stream. Used OpencV image analysis techniques to identify lines, including Hough Transforms and Canny edge detection.
  - **Keywords:** Computer Vision
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/851338/shared) 
  
-#### [P2 - Traffic Sign Classifier](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P02-Traffic-Sign-Classifier)
+#### [P02 - Traffic Sign Classifier](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P02-Traffic-Sign-Classifier)
  - **Summary:** Built and trained a deep neural network to classify traffic signs, using TensorFlow. Experimented with different network architectures. Performed image pre-processing and validation to guard against overfitting.
  - **Keywords:** Deep Learning, TensorFlow, Computer Vision
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/911777/shared)
  
-#### [P3 - Behavioral Cloning](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P03-Behavioral-Cloning)
+#### [P03 - Behavioral Cloning](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P03-Behavioral-Cloning)
  - **Summary:** Built and trained a convolutional neural network for end-to-end driving in a simulator, using TensorFlow and Keras. Used optimization techniques such as regularization and dropout to generalize the network for driving on multiple tracks.
  - **Keywords:** Deep Learning, Keras, Convolutional Neural Networks
-
-#### [P4 - Advanced Lane Finding](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P04-Advanced-Lane-Lines)
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/969487/shared)
+ 
+#### [P04 - Advanced Lane Finding](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P04-Advanced-Lane-Lines)
  - **Summary:** Built an advanced lane-finding algorithm using distortion correction, image rectification, color transforms, and gradient thresholding. Identified lane curvature and vehicle displacement. Overcame environmental challenges such as shadows and pavement changes.
  - **Keywords:** Computer Vision, OpenCV
- 
-#### [P5 - Vehicle Detection and Tracking](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1011619/shared)
+
+#### [P05 - Vehicle Detection and Tracking](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
  - **Summary:** Created a vehicle detection and tracking pipeline with OpenCV, histogram of oriented gradients (HOG), and support vector machines (SVM). Implemented the same pipeline using a deep network to perform detection. Optimized and evaluated the model on video data from a automotive camera taken during highway driving.
  - **Keywords:** Computer Vision, Deep Learning, OpenCV
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1009726/shared)
