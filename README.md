@@ -5,18 +5,18 @@ Udacity Self-Driving Car Engineer Nanodegree projects.
 
 ### Projects
 
-#### TERM 1
+#### TERM 1: Computer Vision and Deeep Learning
 <table style="width:100%">
   <tr>
     <th>
       <p align="center">
            <a href="./Udacity-CarND-P01-LaneLines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8222a9_1-2-project-finding-lane-lines2x/1-2-project-finding-lane-lines2x.jpg" alt="Overview" width="60%" height="60%"></a>
-           <br>P1: Basic Lane Finding
+           <br>P1: Finding Lane Lines
       </p>
     </th>
     <th><p align="center">
            <a href="./Udacity-CarND-P02-Traffic-Sign-Classifier"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822410_1-9-project-traffic-sign-classifier2x/1-9-project-traffic-sign-classifier2x.jpg" alt="Overview" width="60%" height="60%"></a>
-           <br>P2: Traffic Signs
+           <br>P2: Traffic Sign Classifier
         </p>
     </th>
     <th><p align="center">
@@ -26,7 +26,7 @@ Udacity Self-Driving Car Engineer Nanodegree projects.
    </th>
    <th><p align="center">
            <a href="./Udacity-CarND-P04-Advanced-Lane-Lines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822474_1-13-project-advanced-lane-finding2x/1-13-project-advanced-lane-finding2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
-           <br>P4: Adv. Lane Finding
+           <br>P4: Ad. Lane Finding
         </p>
     </th>
   </tr>
@@ -41,11 +41,11 @@ Udacity Self-Driving Car Engineer Nanodegree projects.
 
 ## Table of Contents
 
-#### [P1 - Detecting Lane Lines (basic)](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P01-LaneLines)
+#### [P1 - Finding Lane Lines on the Road](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P01-LaneLines)
  - **Summary:** Detected highway lane lines on a video stream. Used OpencV image analysis techniques to identify lines, including Hough Transforms and Canny edge detection.
  - **Keywords:** Computer Vision
  
-#### [P2 - Traffic Sign Classification](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P02-Traffic-Sign-Classifier)
+#### [P2 - Traffic Sign Classifier](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P02-Traffic-Sign-Classifier)
  - **Summary:** Built and trained a deep neural network to classify traffic signs, using TensorFlow. Experimented with different network architectures. Performed image pre-processing and validation to guard against overfitting.
  - **Keywords:** Deep Learning, TensorFlow, Computer Vision
  
