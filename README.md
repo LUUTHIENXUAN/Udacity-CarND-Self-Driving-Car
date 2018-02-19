@@ -6,38 +6,49 @@ Udacity Self-Driving Car Engineer Nanodegree projects.
 ### Projects
 
 #### TERM 1: Computer Vision and Deeep Learning
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <table style="width:100%">
   <tr>
     <th>
       <p align="center">
            <a href="./Udacity-CarND-P01-LaneLines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8222a9_1-2-project-finding-lane-lines2x/1-2-project-finding-lane-lines2x.jpg" alt="Overview" width="60%" height="60%"></a>
-           <br>P1: Finding Lane Lines
+           <br>P01: Finding Lane Lines
       </p>
     </th>
     <th><p align="center">
            <a href="./Udacity-CarND-P02-Traffic-Sign-Classifier"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822410_1-9-project-traffic-sign-classifier2x/1-9-project-traffic-sign-classifier2x.jpg" alt="Overview" width="60%" height="60%"></a>
-           <br>P2: Traffic Sign Classifier
+           <br>P02: Traffic Sign Classifier
         </p>
     </th>
     <th><p align="center">
            <a href="./Udacity-CarND-P03-Behavioral-Cloning"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a82244a_1-12-project-behavioral-cloning2x/1-12-project-behavioral-cloning2x.jpg" alt="Overview" width="60%" height="60%"></a>
-           <br>P3: Behavioral Cloning
+           <br>P03: Behavioral Cloning
         </p>
    </th>
-   <th><p align="center">
-           <a href="./Udacity-CarND-P04-Advanced-Lane-Lines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822474_1-13-project-advanced-lane-finding2x/1-13-project-advanced-lane-finding2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
-           <br>P4: Ad. Lane Finding
-        </p>
-    </th>
   </tr>
   <tr>
+   <th><p align="center">
+           <a href="./Udacity-CarND-P04-Advanced-Lane-Lines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822474_1-13-project-advanced-lane-finding2x/1-13-project-advanced-lane-finding2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
+           <br>P04: Ad. Lane Finding
+        </p>
+    </th> 
     <th><p align="center">
            <a href="./Udacity-CarND-P05-Vehicle-Detection"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8224c3_1-17-project-vechicle-detection-and-tracking2x/1-17-project-vechicle-detection-and-tracking2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
-           <br>P5: Vehicle Detection
+           <br>P05: Vehicle Detection
         </p>
     </th>
   </tr>
 </table>
+
+</body>
+</html>
 
 ## Table of Contents
 
