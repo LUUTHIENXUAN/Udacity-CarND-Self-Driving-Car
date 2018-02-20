@@ -52,6 +52,53 @@ Udacity Self-Driving Car Engineer Nanodegree projects.
 </body>
 </html>
 
+#### TERM 2: Sensor Fusion, Localization, and Control
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- meta charset="UTF-8" -->
+  <!-- meta name="viewport" content="width=device-width, initial-scale=1.0" -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+<table style="width:100%">
+  <tr>
+    <th>
+      <p align="center">
+           <a href="./Udacity-CarND-P01-LaneLines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8227c5_2-6-project-extended-kalman-filter-project2x/2-6-project-extended-kalman-filter-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">P06: Extended Kalman Filters </br> 
+      </p>
+    </th>
+    <th><p align="center">
+           <a href="./Udacity-CarND-P02-Traffic-Sign-Classifier"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8227e8_2-8-unscented-kalman-filter-project2x/2-8-unscented-kalman-filter-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">P07: Unscented Kalman Filters </br>
+        </p>
+    </th>
+    <th><p align="center">
+           <a href="./Udacity-CarND-P03-Behavioral-Cloning"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8228b1_2-15-project-kidnapped-vehicle-project2x/2-15-project-kidnapped-vehicle-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">P08: Kidnapped Vehicle </br>
+        </p>
+   </th>
+  </tr>
+  <tr>
+   <th><p align="center">
+           <a href="./Udacity-CarND-P04-Advanced-Lane-Lines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8228d4_2-17-project-pid-controller-project2x/2-17-project-pid-controller-project2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">P09: PID Controller </br>
+        </p>
+    </th> 
+    <th><p align="center" style="font-size:10vw;">
+           <a href="./Udacity-CarND-P05-Vehicle-Detection"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822900_2-20-project-model-predictive-control-project2x/2-20-project-model-predictive-control-project2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">P10: Model Predictive Control </br>
+        </p>
+    </th>
+  </tr>
+</table>
+
+</body>
+</html>
+
 ## Table of Contents
 
 #### [P01 - Finding Lane Lines on the Road](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P01-LaneLines)
