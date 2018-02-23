@@ -1,11 +1,17 @@
 # Udacity-CarND-Self-Driving-Car
-Udacity Self-Driving Car Engineer Nanodegree projects.
+Udacity Self-Driving Car Engineer Nanodegree projects.<br>
+*Image source: Udacity*
 
 ## Overview
 
+<p align="center">
+  <img src="https://readrise.s3.amazonaws.com/m/content/140/thumb_1406762.png" />
+</p>
+<p align="center">Self Driving Car System<p align="center">
+
 ### Projects
 
-#### TERM 1: Computer Vision and Deeep Learning
+#### TERM 1: Computer Vision and Deep Learning
 
 <!DOCTYPE html>
 <html>
