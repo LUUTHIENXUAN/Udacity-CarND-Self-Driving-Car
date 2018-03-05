@@ -9,6 +9,14 @@ Udacity Self-Driving Car Engineer Nanodegree projects.<br>
 </p>
 <p align="center">Self Driving Car System<p align="center">
 
+The self-driving car system comes down with 3 main parts as mapping (**Computer vision**, **Sensor fusion** and **Localization**), **Path planning** and **Control**. 
+  - The mapping part helps the self-driving car figure out its environment and where it is in the world by using vairous sensor devices such as Camera, Lidar , Radar, Gps and even the previously constructed map. 
+    - **Computer vision** is how to use camera to detect lane lines, traffic signs, and track objects such as vehicles and pedestrians. 
+    - **Sensor vision** is how to intergate data from other sensor as Lidar and Radar together with camera data to build its 3D surrounding environment. Lidar is used to detect objects but clustering its point cloud while using Radar to guess those objects' velocity. This part needs the calibration between those sensors to label 3D objects from **Computer vision** and map all of them to the local map. Note that Lidar often fail to detect objects in case of rainy day, or multiple objects stayed closely, etc.
+    - **Localization** is how to localize the car in the real world. The car could use GPS or Lidar with previously constructed map to detect its localization. Highly accurate RTK-GPS method could be accurate within 20 cm but it easily fails in cities with high buildings. Lidar with previously constructed map method is suited with local map but not global map. The bigger Lidar's map the higger error accumulated when constructing map. 
+  - The **path planning** part is to build a trajectory to run the car to its destination. This part considers tracked objects from **sensor vision** and road rules like traffic sign detection from **Computer vision** to decide the safe, comfortable and compliance action (maneuver).
+  - The **control** part is to make the car turn the steering wheel, hit the throttle or the brake, in other to follow the trajectory from **path planning** part as closely as possible.
+  
 ### Projects
 
 #### TERM 1: Computer Vision and Deep Learning
