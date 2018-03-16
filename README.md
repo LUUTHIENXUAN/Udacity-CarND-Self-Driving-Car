@@ -13,19 +13,32 @@ Below is the sensor fusion general flow by using Extended Kalman Filter (EKF)
 <p align="center">Sensor Fusion general flow<p align="center">
 
 Initial State and x and Covariance Matrix P were setup as following:
+
+<!---
 $$x =\begin{pmatrix}
 {0.001}\\
 {0.001}\\
 {0.001}\\
 {0.001}
-\end{pmatrix}$$
+\end{pmatrix}$$ >
+-->
 
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x%3D%5Cbegin%7Bpmatrix%7D%0D%0A%7B0.001%7D%5C%5C%0D%0A%7B0.001%7D%5C%5C%0D%0A%7B0.001%7D%5C%5C%0D%0A%7B0.001%7D%0D%0A%5Cend%7Bpmatrix%7D" />
+</p>
+
+<!---
 $$P =\begin{pmatrix}
 1&0&1&0\\
 0&1&0&0\\
 0&0&1000&0\\
 0&0&0&1000
 \end{pmatrix}$$
+-->
+
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;P%3D%5Cbegin%7Bpmatrix%7D%0D%0A1%260%261%260%5C%5C%0D%0A0%261%260%260%5C%5C%0D%0A0%260%261000%260%5C%5C%0D%0A0%260%260%261000%0D%0A%5Cend%7Bpmatrix%7D" />
+</p>
 
 The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. The smaller RMSE the higher accuracy.
 
@@ -38,7 +51,7 @@ When turning off one of those sensors, it affects the accuracy so bad.
 Without Lidar sensor
 
 Dataset 1             |  Dataset 2 
-:-------------------------:|:-------------------------:
+:-------------------------:|:-------------------------
 <img src="./pics/Dataset_1_noise_9_9_without_LASER.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9_without_LASER.png" width="500"> 
 
 Without Radar sensor, 
@@ -52,22 +65,42 @@ Overall, the EKF does a good job for predicting location of tracking objects. Li
 This project did not address when using EKF is how to properly set up the covariance matrixes of process noise Q and measurement noise R. Here, R is often assigned as a constant matrix based on the instrument accuracy of the measurements while Q is assigned as a constant matrix using a trial-and-error approach. 
 Below is the matrix Q  including time ${\Delta t}$  to account for the fact that as more time passes, the more uncertain about our position and velocity. ${\sigma_{ax} ^2}$ and ${\sigma_{ay} ^2}$ stand for noises ${noise_{ax} }$, ${noise_{ay} }$ respectively. 
 
+<!---
 $$Q =\begin{pmatrix}
 {\Delta t^4\over 4}{\sigma_{ax} ^2}&0&{\Delta t^3\over 2}{\sigma_{ax} ^2}&0\\
 0&{\Delta t^4\over 4}{\sigma_{ay} ^2}&0&{\Delta t^3\over 2}{\sigma_{ay} ^2}\\
 {\Delta t^3\over 2}{\sigma_{ax} ^2}&0&{\Delta t^2}{\sigma_{ax} ^2}&0\\
 0&{\Delta t^3\over 2}{\sigma_{ay} ^2}&0&{\Delta t^2}{\sigma_{ay} ^2}
 \end{pmatrix}$$
+-->
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;Q%3D%5Cbegin%7Bpmatrix%7D%0D%0A%7B%5CDeltat%5E4%5Cover4%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%26%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%5C%5C%0D%0A0%26%7B%5CDeltat%5E4%5Cover4%7D%7B%5Csigma_%7Bay%7D%5E2%7D%260%26%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bay%7D%5E2%7D%5C%5C%0D%0A%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%26%7B%5CDeltat%5E2%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%5C%5C%0D%0A0%26%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bay%7D%5E2%7D%260%26%7B%5CDeltat%5E2%7D%7B%5Csigma_%7Bay%7D%5E2%7D%0D%0A%5Cend%7Bpmatrix%7D" />
+</p>
+
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;{{\Delta}t^4\over4}{\sigma_{ax}^2}" />
+</p>
 
 Below is the result when tunning noises $({noise_{ax} }$, ${noise_{ay} })$ from defaul value $(9,9)$ to $(6,6)$ and $(12,12)$.
- 
- $({noise_{ax} }$, ${noise_{ay} })$ = $(6,6)$
+
+<!--- 
+$({noise_{ax} }$, ${noise_{ay} })$ = $(6,6)$
+-->
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;({noise_{ax}},{noise_{ay}})=(6,6)" />
+</p>
+
 
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
 <img src="./pics/Dataset_1_noise_6_6.png" width="500">  |   <img src="./pics/Dataset_2_noise_6_6.png" width="500"> 
 
+<!---
 $({noise_{ax} }$, ${noise_{ay} })$ = $(12,12)$
+-->
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;({noise_{ax}},{noise_{ay}})=(12,12)" />
+</p>
 
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
