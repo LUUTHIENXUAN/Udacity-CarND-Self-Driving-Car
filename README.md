@@ -74,11 +74,7 @@ $$Q =\begin{pmatrix}
 \end{pmatrix}$$
 -->
 <p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;Q%3D%5Cbegin%7Bpmatrix%7D%0D%0A%7B%5CDeltat%5E4%5Cover4%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%26%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%5C%5C%0D%0A0%26%7B%5CDeltat%5E4%5Cover4%7D%7B%5Csigma_%7Bay%7D%5E2%7D%260%26%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bay%7D%5E2%7D%5C%5C%0D%0A%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%26%7B%5CDeltat%5E2%7D%7B%5Csigma_%7Bax%7D%5E2%7D%260%5C%5C%0D%0A0%26%7B%5CDeltat%5E3%5Cover2%7D%7B%5Csigma_%7Bay%7D%5E2%7D%260%26%7B%5CDeltat%5E2%7D%7B%5Csigma_%7Bay%7D%5E2%7D%0D%0A%5Cend%7Bpmatrix%7D" />
-</p>
-
-<p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;{{\Delta}t^4\over4}{\sigma_{ax}^2}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;Q=\begin{pmatrix}{{\Delta}t^4\over4}{\sigma_{ax}^2}&0&{{\Delta}t^3\over2}{\sigma_{ax}^2}&0\\0&{{\Delta}t^4\over4}{\sigma_{ay}^2}&0&{{\Delta}t^3\over2}{\sigma_{ay}^2}\\{{\Delta}t^3\over2}{\sigma_{ax}^2}&0&{{\Delta}t^2}{\sigma_{ax}^2}&0\\0&{{\Delta}t^3\over2}{\sigma_{ay}^2}&0&{{\Delta}t^2}{\sigma_{ay}^2}\end{pmatrix}" />
 </p>
 
 Below is the result when tunning noises $({noise_{ax} }$, ${noise_{ay} })$ from defaul value $(9,9)$ to $(6,6)$ and $(12,12)$.
