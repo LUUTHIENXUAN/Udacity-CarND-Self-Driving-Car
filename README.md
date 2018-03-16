@@ -102,6 +102,8 @@ Dataset 1             |  Dataset 2
 :-------------------------:|:-------------------------:
 <img src="./pics/Dataset_1_noise_12_12.png" width="500">  |   <img src="./pics/Dataset_2_noise_12_12.png" width="500"> 
 
+I added timer calculation and suprisingly the whole program run so fast.(below millisecond !!!) 
+
 ## 3. Set up environment
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
