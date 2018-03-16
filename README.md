@@ -36,14 +36,16 @@ Dataset 1             |  Dataset 2
 When turning off one of those sensors, it affects the accuracy so bad.
 
 Without Lidar sensor
+
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
 <img src="./pics/Dataset_1_noise_9_9_without_LASER.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9_without_LASER.png" width="500"> 
 
 Without Radar sensor, 
+
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
-<img src="./pics/Dataset_1_noise_9_9_without_LIDAR.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9_without_LIDAR.png" width="500"> 
+<img src="./pics/Dataset_1_noise_9_9_without_RIDAR.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9_without_RIDAR.png" width="500"> 
 
 Overall, the EKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
 
@@ -60,11 +62,13 @@ $$Q =\begin{pmatrix}
 Below is the result when tunning noises $({noise_{ax} }$, ${noise_{ay} })$ from defaul value $(9,9)$ to $(6,6)$ and $(12,12)$.
  
  $({noise_{ax} }$, ${noise_{ay} })$ = $(6,6)$
+
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
 <img src="./pics/Dataset_1_noise_6_6.png" width="500">  |   <img src="./pics/Dataset_2_noise_6_6.png" width="500"> 
 
 $({noise_{ax} }$, ${noise_{ay} })$ = $(12,12)$
+
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
 <img src="./pics/Dataset_1_noise_12_12.png" width="500">  |   <img src="./pics/Dataset_2_noise_12_12.png" width="500"> 
