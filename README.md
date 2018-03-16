@@ -24,7 +24,7 @@ $$x =\begin{pmatrix}
 -->
 
 <p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x%3D%5Cbegin%7Bpmatrix%7D%0D%0A%7B0.001%7D%5C%5C%0D%0A%7B0.001%7D%5C%5C%0D%0A%7B0.001%7D%5C%5C%0D%0A%7B0.001%7D%0D%0A%5Cend%7Bpmatrix%7D" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\begin{pmatrix}{0.001}\\{0.001}\\{0.001}\\{0.001}\end{pmatrix}" />
 </p>
 
 <!---
@@ -37,7 +37,7 @@ $$P =\begin{pmatrix}
 -->
 
 <p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;P%3D%5Cbegin%7Bpmatrix%7D%0D%0A1%260%261%260%5C%5C%0D%0A0%261%260%260%5C%5C%0D%0A0%260%261000%260%5C%5C%0D%0A0%260%260%261000%0D%0A%5Cend%7Bpmatrix%7D" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;P=\begin{pmatrix}1&0&1&0\\0&1&0&0\\0&0&1000&0\\0&0&0&1000\end{pmatrix}" />
 </p>
 
 The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. The smaller RMSE the higher accuracy.
