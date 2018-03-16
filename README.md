@@ -63,7 +63,7 @@ Dataset 1             |  Dataset 2
 Overall, the EKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
 
 This project did not address when using EKF is how to properly set up the covariance matrixes of process noise Q and measurement noise R. Here, R is often assigned as a constant matrix based on the instrument accuracy of the measurements while Q is assigned as a constant matrix using a trial-and-error approach. 
-Below is the matrix Q  including time ${\Delta t}$  to account for the fact that as more time passes, the more uncertain about our position and velocity. ${\sigma_{ax} ^2}$ and ${\sigma_{ay} ^2}$ stand for noises ${noise_{ax} }$, ${noise_{ay} }$ respectively. 
+Below is the matrix Q  including time ![](https://latex.codecogs.com/svg.latex?\{{\Delta}t}) to account for the fact that as more time passes, the more uncertain about our position and velocity. ![](https://latex.codecogs.com/svg.latex?\{\sigma_{ax}^2},{\sigma_{ay}^2}) stand for noises ![](https://latex.codecogs.com/svg.latex?\{noise_{ax},{noise_{ay}) respectively. 
 
 <!---
 $$Q =\begin{pmatrix}
@@ -77,7 +77,11 @@ $$Q =\begin{pmatrix}
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;Q=\begin{pmatrix}{{\Delta}t^4\over4}{\sigma_{ax}^2}&0&{{\Delta}t^3\over2}{\sigma_{ax}^2}&0\\0&{{\Delta}t^4\over4}{\sigma_{ay}^2}&0&{{\Delta}t^3\over2}{\sigma_{ay}^2}\\{{\Delta}t^3\over2}{\sigma_{ax}^2}&0&{{\Delta}t^2}{\sigma_{ax}^2}&0\\0&{{\Delta}t^3\over2}{\sigma_{ay}^2}&0&{{\Delta}t^2}{\sigma_{ay}^2}\end{pmatrix}" />
 </p>
 
-Below is the result when tunning noises $({noise_{ax} }$, ${noise_{ay} })$ from defaul value $(9,9)$ to $(6,6)$ and $(12,12)$.
+Below is the result when tunning noises ![](https://latex.codecogs.com/svg.latex?\{noise_{ax},{noise_{ay}) from defaul value (9,9) to (6,6) and (12,12)
+
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\{noise_{ax},{noise_{ay}" />
+</p>
 
 <!--- 
 $({noise_{ax} }$, ${noise_{ay} })$ = $(6,6)$
