@@ -81,7 +81,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
   <tr>
     <th>
       <p align="center">
-           <a href="./Udacity-CarND-P01-LaneLines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8227c5_2-6-project-extended-kalman-filter-project2x/2-6-project-extended-kalman-filter-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <a href="./Udacity-CarND-P06-Extended-Kalman-Filter"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8227c5_2-6-project-extended-kalman-filter-project2x/2-6-project-extended-kalman-filter-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
            <br style="font-size:10vw;">P06: Extended Kalman Filters </br> 
       </p>
     </th>
