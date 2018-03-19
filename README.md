@@ -140,7 +140,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
  - **Keywords:** Computer Vision, Histogram of Oriented Gradients, Machine Learning, OpenCV, Support Vector Machines, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1009726/shared)
  
- #### [P06 - Vehicle Detection and Tracking](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
+ #### [P06 - Extended Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
  - **Summary:** Implemented an Extended Kalman Filter algorithm in C++ capable of tracking a pedestrian's motion in two dimensions.
  - **Keywords:** C++
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1095502/shared)
