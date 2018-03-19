@@ -117,25 +117,30 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
 
 #### [P01 - Finding Lane Lines on the Road](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P01-LaneLines)
  - **Summary:** Detected highway lane lines on a video stream. Used OpencV image analysis techniques to identify lines, including Hough Transforms and Canny edge detection.
- - **Keywords:** Computer Vision
+ - **Keywords:** Computer Vision, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/851338/shared) 
  
 #### [P02 - Traffic Sign Classifier](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P02-Traffic-Sign-Classifier)
  - **Summary:** Built and trained a deep neural network to classify traffic signs, using TensorFlow. Experimented with different network architectures. Performed image pre-processing and validation to guard against overfitting.
- - **Keywords:** Computer Vision, Deep Learning, TensorFlow 
+ - **Keywords:** Computer Vision, Deep Learning, TensorFlow, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/911777/shared)
  
 #### [P03 - Behavioral Cloning](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P03-Behavioral-Cloning)
  - **Summary:** Built and trained a convolutional neural network for end-to-end driving in a simulator, using TensorFlow and Keras. Used optimization techniques such as regularization and dropout to generalize the network for driving on multiple tracks.
- - **Keywords:** Deep Learning, Convolutional Neural Networks, Keras
+ - **Keywords:** Deep Learning, Convolutional Neural Networks, Keras, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/969487/shared)
  
 #### [P04 - Advanced Lane Finding](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P04-Advanced-Lane-Lines)
  - **Summary:** Built an advanced lane-finding algorithm using distortion correction, image rectification, color transforms, and gradient thresholding. Identified lane curvature and vehicle displacement. Overcame environmental challenges such as shadows and pavement changes.
- - **Keywords:** Computer Vision, OpenCV
+ - **Keywords:** Computer Vision, OpenCV, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1011619/shared)
 
 #### [P05 - Vehicle Detection and Tracking](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
  - **Summary:** Created a vehicle detection and tracking pipeline with OpenCV, histogram of oriented gradients (HOG), and support vector machines (SVM). Optimized and evaluated the model on video data from a automotive camera taken during highway driving.
- - **Keywords:** Computer Vision, Histogram of Oriented Gradients, Machine Learning, OpenCV, Support Vector Machines
+ - **Keywords:** Computer Vision, Histogram of Oriented Gradients, Machine Learning, OpenCV, Support Vector Machines, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1009726/shared)
+ 
+ #### [P06 - Vehicle Detection and Tracking](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
+ - **Summary:** Implemented an Extended Kalman Filter algorithm in C++ capable of tracking a pedestrian's motion in two dimensions.
+ - **Keywords:** C++
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1095502/shared)
