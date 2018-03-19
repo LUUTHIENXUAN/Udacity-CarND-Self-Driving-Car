@@ -40,7 +40,7 @@ $$P =\begin{pmatrix}
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;P=\begin{pmatrix}1&0&1&0\\0&1&0&0\\0&0&1000&0\\0&0&0&1000\end{pmatrix}" />
 </p>
 
-The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. The smaller RMSE the higher accuracy.
+The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. Error is the difference between actual measurement and its estimated value. The smaller RMSE the higher accuracy archived.
 
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
@@ -62,7 +62,8 @@ Dataset 1             |  Dataset 2
 
 Overall, the EKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
 
-This project did not address when using EKF is how to properly set up the covariance matrixes of process noise Q and measurement noise R. Here, R is often assigned as a constant matrix based on the instrument accuracy of the measurements while Q is assigned as a constant matrix using a trial-and-error approach. 
+This project did not address when using EKF is how to properly set up the covariance matrixes of process noise Q and measurement noise R. Refer to this [article](https://arxiv.org/ftp/arxiv/papers/1702/1702.00884.pdf), R is often assigned as a constant matrix based on the instrument accuracy of the measurements while Q is assigned as a constant matrix using a trial-and-error approach. 
+
 Below is the matrix Q  including time ![](https://latex.codecogs.com/svg.latex?\{{\Delta}t}) to account for the fact that as more time passes, the more uncertain about our position and velocity. ![](https://latex.codecogs.com/svg.latex?\{\sigma_{ax}^2},{\sigma_{ay}^2}) stand for noises ![](https://latex.codecogs.com/svg.latex?\{noise_{ax},{noise_{ay}) respectively. 
 
 <!---
@@ -102,7 +103,7 @@ Dataset 1             |  Dataset 2
 :-------------------------:|:-------------------------:
 <img src="./pics/Dataset_1_noise_12_12.png" width="500">  |   <img src="./pics/Dataset_2_noise_12_12.png" width="500"> 
 
-I added timer calculation and suprisingly the whole program run so fast.(below millisecond !!!) 
+**Note**: I added timer calculation and suprisingly the whole program run so fast.(below millisecond !!!) 
 
 ## 3. Set up environment
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
