@@ -20,6 +20,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
 ### Projects
 
 #### TERM 1: Computer Vision and Deep Learning
+> *teach the car to detect lane lines, predict steering angle, and more all based on just camera data!*
 
 <!DOCTYPE html>
 <html>
@@ -67,7 +68,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
 </html>
 
 #### TERM 2: Sensor Fusion, Localization, and Control
-
+> *evaluate sensor data from camera, radar, lidar, and GPS, and use these in closed-loop controllers that actuate the vehicle.*
 <!DOCTYPE html>
 <html>
 <head>
