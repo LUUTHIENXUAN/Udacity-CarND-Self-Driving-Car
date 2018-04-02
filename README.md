@@ -38,8 +38,10 @@ $$P =\begin{pmatrix}
 -->
 
 <p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;P=\begin{pmatrix}1&0&1&0\\0&1&0&0\\0&0&1000&0\\0&0&0&1000\end{pmatrix}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;P=\begin{pmatrix}0.0&0.0&0.0&0.0&0.0\\0.0&0.0&0.0&0.0&0.0\\0.0&0.0&0.5&0.0&0.0\\0.0&0.0&0.0&0.5&0.0\\0.0&0.0&0.0&0.0&0.5\end{pmatrix}" />
 </p>
+
+
 
 The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. Error is the difference between actual measurement and its estimated value. The smaller RMSE the higher accuracy archived.
 
