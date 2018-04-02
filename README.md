@@ -41,8 +41,6 @@ $$P =\begin{pmatrix}
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;P=\begin{pmatrix}0.0&0.0&0.0&0.0&0.0\\0.0&0.0&0.0&0.0&0.0\\0.0&0.0&0.5&0.0&0.0\\0.0&0.0&0.0&0.5&0.0\\0.0&0.0&0.0&0.0&0.5\end{pmatrix}" />
 </p>
 
-
-
 The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. Error is the difference between actual measurement and its estimated value. The smaller RMSE the higher accuracy archived.
 
 Dataset 1             |  Dataset 2 
@@ -65,49 +63,6 @@ Dataset 1             |  Dataset 2
 
 Overall, the EKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
 
-This project did not address when using EKF is how to properly set up the covariance matrixes of process noise Q and measurement noise R. Refer to this [article](https://arxiv.org/ftp/arxiv/papers/1702/1702.00884.pdf), R is often assigned as a constant matrix based on the instrument accuracy of the measurements while Q is assigned as a constant matrix using a trial-and-error approach. 
-
-Below is the matrix Q  including time ![](https://latex.codecogs.com/svg.latex?\{{\Delta}t}) to account for the fact that as more time passes, the more uncertain about our position and velocity. ![](https://latex.codecogs.com/svg.latex?\{\sigma_{ax}^2},{\sigma_{ay}^2}) stand for noises ![](https://latex.codecogs.com/svg.latex?\{noise_{ax},{noise_{ay}) respectively. 
-
-<!---
-$$Q =\begin{pmatrix}
-{\Delta t^4\over 4}{\sigma_{ax} ^2}&0&{\Delta t^3\over 2}{\sigma_{ax} ^2}&0\\
-0&{\Delta t^4\over 4}{\sigma_{ay} ^2}&0&{\Delta t^3\over 2}{\sigma_{ay} ^2}\\
-{\Delta t^3\over 2}{\sigma_{ax} ^2}&0&{\Delta t^2}{\sigma_{ax} ^2}&0\\
-0&{\Delta t^3\over 2}{\sigma_{ay} ^2}&0&{\Delta t^2}{\sigma_{ay} ^2}
-\end{pmatrix}$$
--->
-<p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;Q=\begin{pmatrix}{{\Delta}t^4\over4}{\sigma_{ax}^2}&0&{{\Delta}t^3\over2}{\sigma_{ax}^2}&0\\0&{{\Delta}t^4\over4}{\sigma_{ay}^2}&0&{{\Delta}t^3\over2}{\sigma_{ay}^2}\\{{\Delta}t^3\over2}{\sigma_{ax}^2}&0&{{\Delta}t^2}{\sigma_{ax}^2}&0\\0&{{\Delta}t^3\over2}{\sigma_{ay}^2}&0&{{\Delta}t^2}{\sigma_{ay}^2}\end{pmatrix}" />
-</p>
-
-Below is the result when tunning noises ![](https://latex.codecogs.com/svg.latex?\{noise_{ax},{noise_{ay}) from defaul value `(9,9)` to `(6,6)` and `(12,12)`. The RSME value became slightly better.
-
-<!--- 
-$({noise_{ax} }$, ${noise_{ay} })$ = $(6,6)$
--->
-<p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;({noise_{ax}},{noise_{ay}})=(6,6)" />
-</p>
-
-
-Dataset 1             |  Dataset 2 
-:-------------------------:|:-------------------------:
-<img src="./pics/Dataset_1_noise_6_6.png" width="500">  |   <img src="./pics/Dataset_2_noise_6_6.png" width="500"> 
-
-<!---
-$({noise_{ax} }$, ${noise_{ay} })$ = $(12,12)$
--->
-<p align="center">
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;({noise_{ax}},{noise_{ay}})=(12,12)" />
-</p>
-
-Dataset 1             |  Dataset 2 
-:-------------------------:|:-------------------------:
-<img src="./pics/Dataset_1_noise_12_12.png" width="500">  |   <img src="./pics/Dataset_2_noise_12_12.png" width="500"> 
-
-**Note**: I added timer calculation and suprisingly the whole program run so fast.(below millisecond !!!) 
-
 ## 3. Set up environment
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
 
@@ -121,7 +76,7 @@ Once the install for uWebSocketIO is complete, the main program can be built and
 2. cd build
 3. cmake ..
 4. make
-5. ./ExtendedKF
+5. ./UnscentedKF
 ```
 
 Tips for setting up your environment can be found [here](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/23d376c7-0195-4276-bdf0-e02f1f3c665d)
@@ -166,7 +121,7 @@ OUTPUT: values provided by the c++ program to the simulator
 	2. Make a build directory: `mkdir build && cd build`
 	3. Compile: `cmake .. && make` 
 	   * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
-	4. Run it: `./ExtendedKF `
+	4. Run it: `./UnscentedKF `
 
 ## 6. Editor Settings
 
