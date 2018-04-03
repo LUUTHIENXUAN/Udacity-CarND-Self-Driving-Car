@@ -48,6 +48,28 @@ Longitudinal acceleration and yaw acceleration noise measurement were set up as 
 
 ### Result
 
+<p align="center">
+  <img src="./visulization/UKF_position.png" />
+</p>
+<p align="center">UKF position graph<p align="center">
+
+<p align="center">
+  <img src="./visulization/UKF_position_zoom_in.png" />
+</p>
+<p align="center">UKF position zoomed in graph<p align="center">
+	
+<p align="center">
+  <img src="./visulization/UKF_velocity.png" />
+</p>
+<p align="center">UKF_velocity graph<p align="center">	
+
+<p align="center">
+  <img src="./visulization/UKF_velocity_zoom_in.png" />
+</p>
+<p align="center">UKF velocity zoomed in graph<p align="center">
+	
+### Root Mean Squared Error (RMSE)
+
 The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. Error is the difference between actual measurement and its estimated value. The smaller RMSE the higher accuracy archived.
 
 Dataset 1             |  Dataset 2 
@@ -75,7 +97,15 @@ Overall, the UKF does a good job for predicting location of tracking objects. Li
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;\varepsilon=(z_{k+1}-z_{k+1|k})^{T}.S_{k+1|k}^{-1}.(z_{k+1}-z_{k+1|k})" />
 </p>
 
-
+<p align="center">
+  <img src="./visulization/NIS_laser_zoom_in.png" />
+</p>
+<p align="center">NIS laser zoomed in graph<p align="center">
+	
+<p align="center">
+  <img src="./visulization/NIS_radar_zoom_in.png" />
+</p>
+<p align="center">NIS radar zoomed in graph<p align="center">
 
 ## 3. Set up environment
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)
