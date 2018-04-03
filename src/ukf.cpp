@@ -109,6 +109,11 @@ UKF::UKF() {
   H_laser_ = MatrixXd(2, 5);
   H_laser_ << 1, 0, 0, 0, 0,
               0, 1, 0, 0, 0;
+              
+  // initializing NIS
+  NIS_radar_ = 0;
+  NIS_laser_ = 0;
+  
 }
 
 UKF::~UKF() {}
@@ -182,9 +187,9 @@ void UKF::ProcessMeasurement(MeasurementPackage meas_package) {
     // Radar updates
     R_ = R_radar_;
     UpdateRadar(meas_package);
-    
+
    } else {
-	
+
     // Laser updates
     R_ = R_laser_;
     H_ = H_laser_;      
@@ -381,6 +386,11 @@ void UKF::UpdateLidar(MeasurementPackage meas_package) {
   MatrixXd PHt    = P_ * Ht;
   MatrixXd K      = PHt * Si;
   
+  //calculate NIS
+  //e = (z(k+1) - z(k+1|k)).transpose * S(k+1|k).inverse * (z(k+1) - z(k+1|k))
+  //z(k+1) : actual measurement, z(k+1|k) : predicted measurement
+  NIS_laser_ = y.transpose()*Si*y;
+  
   //new estimate
   x_          = x_ + (K * y);
   long x_size = x_.size();
@@ -495,6 +505,7 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
     Tc = Tc + weights_(i) * x_diff * z_diff.transpose();
   }
   
+  
   //calculate Kalman gain K;
   MatrixXd K = Tc * S.inverse();
 
@@ -503,6 +514,10 @@ void UKF::UpdateRadar(MeasurementPackage meas_package) {
   //angle normalization
   angle_normalization (z_diff(1));
    
+  //calculate NIS
+  //e = (z(k+1) - z(k+1|k)).transpose * S(k+1|k).inverse * (z(k+1) - z(k+1|k))
+  //z(k+1) : actual measurement, z(k+1|k) : predicted measurement
+  NIS_radar_ = z_diff.transpose()*S.inverse()*z_diff;
   
   //update state mean and covariance matrix
   x_ = x_ + K * z_diff;

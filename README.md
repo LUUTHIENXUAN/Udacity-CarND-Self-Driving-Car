@@ -68,7 +68,14 @@ Dataset 1             |  Dataset 2
 :-------------------------:|:-------------------------:
 <img src="./pics/UKF_dataset1_withoutRADAR.png" width="500">  |   <img src="./pics/UKF_dataset2_withoutRADAR.png" width="500"> 
 
-Overall, the EKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
+Overall, the UKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
+
+### Normalized Innovation Squared (NIS)
+<p align="center">
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\varepsilon=(z_{k+1}-z_{k+1|k})^{T}.S_{k+1|k}^{-1}.(z_{k+1}-z_{k+1|k})" />
+</p>
+
+
 
 ## 3. Set up environment
 This project involves the Term 2 Simulator which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases)

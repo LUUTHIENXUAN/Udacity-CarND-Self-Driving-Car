@@ -26,7 +26,8 @@ std::string hasData(std::string s) {
   return "";
 }
 
-int main()
+
+int main(int argc, char* argv[])
 {
   uWS::Hub h;
 
@@ -37,8 +38,36 @@ int main()
   Tools tools;
   vector<VectorXd> estimations;
   vector<VectorXd> ground_truth;
+  
+  ///* write a header line
+  ofstream outfile;
+  
+  outfile.open("output.txt",ofstream::out);
+  // time
+  outfile << "time"  << ", ";
+  
+  // ground true value
+  outfile << "x_true"  << ", ";
+  outfile << "y_true"  << ", ";
+  outfile << "vx_true" << ", ";
+  outfile << "vy_true" << ", ";
+  
+  // estimation value
+  outfile << "x_est"   << ", ";
+  outfile << "y_est"   << ", ";
+  outfile << "vx_est"  << ", ";
+  outfile << "vy_est"  << ", ";
+  
+  // measurement value
+  outfile << "x_meas"   << ", ";
+  outfile << "y_meas"   << ", ";
+  
+  // sensor value
+  outfile << "sensor"  << ", ";
+  outfile << "nis"     << endl;
 
-  h.onMessage([&ukf,&tools,&estimations,&ground_truth](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
+  ///* A reference to outfile needs to be passed, similar to references to ukf etc...:
+  h.onMessage([&ukf,&tools,&estimations,&ground_truth,&outfile](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
@@ -114,7 +143,7 @@ int main()
 
     	  double p_x = ukf.x_(0);
     	  double p_y = ukf.x_(1);
-    	  double v  = ukf.x_(2);
+    	  double v   = ukf.x_(2);
     	  double yaw = ukf.x_(3);
 
     	  double v1 = cos(yaw)*v;
@@ -139,6 +168,49 @@ int main()
           auto msg = "42[\"estimate_marker\"," + msgJson.dump() + "]";
           // std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
+          
+          ///* If the file is open, write output after a filter update:
+          if (outfile.is_open()){
+			  
+			  // time
+			  outfile << fixed << setprecision(4) << timestamp  << ", ";
+			  
+			  // ground true value
+			  outfile << fixed << setprecision(4) << x_gt  << ", ";
+			  outfile << fixed << setprecision(4) << y_gt  << ", ";
+			  outfile << fixed << setprecision(4) << vx_gt << ", ";
+			  outfile << fixed << setprecision(4) << vy_gt << ", ";
+			  
+			  // estimation value
+			  outfile << fixed << setprecision(4) << p_x   << ", ";
+			  outfile << fixed << setprecision(4) << p_y   << ", ";
+			  outfile << fixed << setprecision(4) << v1    << ", ";
+			  outfile << fixed << setprecision(4) << v2    << ", ";
+			  
+			  // measurement value
+			  if (sensor_type.compare("L") == 0){
+				  float px_out = meas_package.raw_measurements_[0];
+				  float py_out = meas_package.raw_measurements_[1];
+				  
+				  outfile << fixed << setprecision(4) << px_out   << ", ";
+				  outfile << fixed << setprecision(4) << py_out   << ", ";
+				  
+		      }else if (sensor_type.compare("R") == 0){
+				  float rho_out  = meas_package.raw_measurements_[0];
+				  float phi_out  = meas_package.raw_measurements_[1];
+				  
+				  outfile << fixed << setprecision(4) << rho_out * cos(phi_out)   << ", ";
+				  outfile << fixed << setprecision(4) << rho_out * sin(phi_out)   << ", ";
+				  	  
+			  }
+		      
+			  // sensor value
+			  outfile << sensor_type << ", ";
+			  double nis;
+			  if (sensor_type.compare("L") == 0) nis = ukf.NIS_laser_;
+			  else if (sensor_type.compare("R") == 0) nis = ukf.NIS_radar_;
+			  outfile << fixed << setprecision(4) << nis << endl;
+          }
 	  
         }
       } else {
@@ -185,6 +257,11 @@ int main()
     return -1;
   }
   h.run();
+  
+  ///* Finally, close the file
+  if (outfile.is_open()){
+	  outfile.close();
+  }
 }
 
 
