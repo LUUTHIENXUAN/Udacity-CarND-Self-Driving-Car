@@ -12,6 +12,7 @@ Below is the sensor fusion general flow by using Unsented Kalman Filter (UKF)
 </p>
 <p align="center">Sensor Fusion general flow<p align="center">
 
+### Paramaters Initialization 
 Initial State and x and Covariance Matrix P were setup as following:
 
 <!---
@@ -40,6 +41,12 @@ $$P =\begin{pmatrix}
 <p align="center">
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;P=\begin{pmatrix}0.0&0.0&0.0&0.0&0.0\\0.0&0.0&0.0&0.0&0.0\\0.0&0.0&0.5&0.0&0.0\\0.0&0.0&0.0&0.5&0.0\\0.0&0.0&0.0&0.0&0.5\end{pmatrix}" />
 </p>
+
+Longitudinal acceleration and yaw acceleration noise measurement were set up as follow:  
+- `std_a_`: 1.8 *(process noise standard deviation longitudinal acceleration in m/s^2)*. 
+- `std_yawd_`: 0.7 *(process noise standard deviation yaw acceleration in rad/s^2)*. 
+
+### Result
 
 The following images show the final RMSE (Root Mean Squared Error ) values of both datasets by combining Lidar and Radar sensors. Error is the difference between actual measurement and its estimated value. The smaller RMSE the higher accuracy archived.
 
