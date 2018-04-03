@@ -59,7 +59,7 @@ When turning off one of those sensors, it affects the accuracy so bad.
 Without Lidar sensor
 
 Dataset 1             |  Dataset 2 
-:-------------------------:|:-------------------------
+:-------------------------:|:-------------------------:
 <img src="./pics/UKF_dataset1_withoutLIDAR.png" width="500">  |   <img src="./pics/UKF_dataset2_withoutRADAR.png" width="500"> 
 
 Without Radar sensor
