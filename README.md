@@ -52,7 +52,7 @@ The following images show the final RMSE (Root Mean Squared Error ) values of bo
 
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
-<img src="./pics/Dataset_1_noise_9_9.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9.png" width="500"> 
+<img src="./pics/UKF_dataset1.png" width="500">  |   <img src="./pics/UKF_dataset2.png" width="500"> 
 
 When turning off one of those sensors, it affects the accuracy so bad.
 
@@ -60,13 +60,13 @@ Without Lidar sensor
 
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------
-<img src="./pics/Dataset_1_noise_9_9_without_LASER.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9_without_LASER.png" width="500"> 
+<img src="./pics/UKF_dataset1_withoutLIDAR.png" width="500">  |   <img src="./pics/UKF_dataset2_withoutRADAR.png" width="500"> 
 
-Without Radar sensor, 
+Without Radar sensor
 
 Dataset 1             |  Dataset 2 
 :-------------------------:|:-------------------------:
-<img src="./pics/Dataset_1_noise_9_9_without_RIDAR.png" width="500">  |   <img src="./pics/Dataset_2_noise_9_9_without_RIDAR.png" width="500"> 
+<img src="./pics/UKF_dataset1_withoutRADAR.png" width="500">  |   <img src="./pics/UKF_dataset2_withoutRADAR.png" width="500"> 
 
 Overall, the EKF does a good job for predicting location of tracking objects. Lidar (Laser) measures object location precisely which help improve the location prediction while Radar gives better object's velocity estimation which therefore improve velocity prediction. 
 
