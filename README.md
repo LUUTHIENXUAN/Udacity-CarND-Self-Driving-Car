@@ -146,12 +146,12 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
  - **Keywords:** Computer Vision, Histogram of Oriented Gradients, Machine Learning, OpenCV, Support Vector Machines, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1009726/shared)
  
- #### [P06 - Extended Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P06-Extended-Kalman-Filter)
+#### [P06 - Extended Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P06-Extended-Kalman-Filter)
  - **Summary:** Implemented an Extended Kalman Filter algorithm in C++ capable of tracking a pedestrian's motion in two dimensions.
  - **Keywords:** C++
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1095502/shared)
  
-  #### [P07 - Unscented Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P07-Unscented-Kalman-Filter)
+#### [P07 - Unscented Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P07-Unscented-Kalman-Filter)
  - **Summary:** IImplemented an Unscented Kalman Filter algorithm in C++ capable of accurately and performantly tracking a turning object.
  - **Keywords:** C++
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1134704/shared)
