@@ -20,6 +20,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
 ### Projects
 
 #### TERM 1: Computer Vision and Deep Learning
+> *teach the car to detect lane lines, predict steering angle, and more all based on just camera data!*
 
 <!DOCTYPE html>
 <html>
@@ -60,6 +61,11 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
            <br style="font-size:10vw;">P05: Vehicle Detection </br>
         </p>
     </th>
+    <th><p align="center" style="font-size:10vw;">
+           <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8224da_1-18-the-end2x/1-18-the-end2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">The End</br>
+        </p>
+    </th>
   </tr>
 </table>
 
@@ -67,7 +73,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
 </html>
 
 #### TERM 2: Sensor Fusion, Localization, and Control
-
+> *evaluate sensor data from camera, radar, lidar, and GPS, and use these in closed-loop controllers that actuate the vehicle.*
 <!DOCTYPE html>
 <html>
 <head>
@@ -81,7 +87,7 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
   <tr>
     <th>
       <p align="center">
-           <a href="./Udacity-CarND-P01-LaneLines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8227c5_2-6-project-extended-kalman-filter-project2x/2-6-project-extended-kalman-filter-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <a href="./Udacity-CarND-P06-Extended-Kalman-Filter"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8227c5_2-6-project-extended-kalman-filter-project2x/2-6-project-extended-kalman-filter-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
            <br style="font-size:10vw;">P06: Extended Kalman Filters </br> 
       </p>
     </th>
@@ -140,7 +146,12 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
  - **Keywords:** Computer Vision, Histogram of Oriented Gradients, Machine Learning, OpenCV, Support Vector Machines, Python
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1009726/shared)
  
- #### [P06 - Extended Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P05-Vehicle-Detection)
+ #### [P06 - Extended Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P06-Extended-Kalman-Filter)
  - **Summary:** Implemented an Extended Kalman Filter algorithm in C++ capable of tracking a pedestrian's motion in two dimensions.
  - **Keywords:** C++
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1095502/shared)
+ 
+  #### [P07 - Unscented Kalman Filters](https://github.com/LUUTHIENXUAN/Udacity-CarND-Self-Driving-Car/tree/master/Udacity-CarND-P07-Unscented-Kalman-Filter)
+ - **Summary:** IImplemented an Unscented Kalman Filter algorithm in C++ capable of accurately and performantly tracking a turning object.
+ - **Keywords:** C++
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1134704/shared)
