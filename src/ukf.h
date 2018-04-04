@@ -80,6 +80,14 @@ public:
   MatrixXd H_, H_laser_;
 
 
+  ///*  NORMALIZED INNOVATION SQUARED (NIS)
+  ///* current NIS for radar
+  double NIS_radar_;
+
+  ///* current NIS for laser
+  double NIS_laser_;
+  
+  
   /**
    * Constructor
    */
