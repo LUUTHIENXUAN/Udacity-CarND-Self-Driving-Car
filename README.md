@@ -113,6 +113,11 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
            <br style="font-size:10vw;">P10: Model Predictive Control </br>
         </p>
     </th>
+     <th><p align="center" style="font-size:10vw;">
+           <img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8224da_1-18-the-end2x/1-18-the-end2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <br style="font-size:10vw;">The End</br>
+        </p>
+    </th>
   </tr>
 </table>
 
@@ -155,3 +160,18 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
  - **Summary:** IImplemented an Unscented Kalman Filter algorithm in C++ capable of accurately and performantly tracking a turning object.
  - **Keywords:** C++
  - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1134704/shared)
+ 
+ #### [P08 - Kidnapped Vehicle](https://github.com/LUUTHIENXUAN/Udacity-CarND-P8-Kidnapped-Vehicle-Project)
+ - **Summary:** Implemented a 2 dimensional particle filter in C++ capable of localizing a vehicle within desired accuracy and time.
+ - **Keywords:** Particle filters, C++
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1238464/shared)
+ 
+ #### [P09 - PID Controller](https://github.com/LUUTHIENXUAN/Udacity-CarND-P9-PID-Controller)
+ - **Summary:** Implemented a PID controller in C++ to maneuver a vehicle around a track.
+ - **Keywords:** PID control, C++
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1256699/shared)
+ 
+ #### [P10 - Model Predictive Control (MPC)](https://github.com/LUUTHIENXUAN/Udacity-CarND-P10-MPC-Controller)
+ - **Summary:** Implemented Model Predictive Control to drive a vehicle around a track even with additional latency between commands.
+ - **Keywords:** Model predictive control, C++
+ - **Comment from Udacity reviewer:** [LINK](https://review.udacity.com/#!/reviews/1254722/shared)
