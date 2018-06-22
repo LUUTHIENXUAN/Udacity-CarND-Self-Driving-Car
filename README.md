@@ -97,19 +97,19 @@ The self-driving car system comes down with 3 main parts as Mapping (**Computer 
         </p>
     </th>
     <th><p align="center">
-           <a href="./Udacity-CarND-P03-Behavioral-Cloning"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8228b1_2-15-project-kidnapped-vehicle-project2x/2-15-project-kidnapped-vehicle-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
+           <a href="https://github.com/LUUTHIENXUAN/Udacity-CarND-P8-Kidnapped-Vehicle-Project"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8228b1_2-15-project-kidnapped-vehicle-project2x/2-15-project-kidnapped-vehicle-project2x.jpg" alt="Overview" width="60%" height="60%"></a>
            <br style="font-size:10vw;">P08: Kidnapped Vehicle </br>
         </p>
    </th>
   </tr>
   <tr>
    <th><p align="center">
-           <a href="./Udacity-CarND-P04-Advanced-Lane-Lines"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8228d4_2-17-project-pid-controller-project2x/2-17-project-pid-controller-project2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
+           <a href="https://github.com/LUUTHIENXUAN/Udacity-CarND-P9-PID-Controller"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a8228d4_2-17-project-pid-controller-project2x/2-17-project-pid-controller-project2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
            <br style="font-size:10vw;">P09: PID Controller </br>
         </p>
     </th> 
     <th><p align="center" style="font-size:10vw;">
-           <a href="./Udacity-CarND-P05-Vehicle-Detection"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822900_2-20-project-model-predictive-control-project2x/2-20-project-model-predictive-control-project2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
+           <a href="https://github.com/LUUTHIENXUAN/Udacity-CarND-P10-MPC-Controller"><img src="https://s3.amazonaws.com/video.udacity-data.com/topher/2018/February/5a822900_2-20-project-model-predictive-control-project2x/2-20-project-model-predictive-control-project2x.jpg"                         alt="Overview" width="60%" height="60%"></a>
            <br style="font-size:10vw;">P10: Model Predictive Control </br>
         </p>
     </th>
